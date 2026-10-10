@@ -1,0 +1,27 @@
+{
+  "name": "device-profit-project",
+  "version": "1.0.0",
+  "description": "本项目面向制造企业“非计划停机 + 废品率上升”侵蚀利润的场景，完整演示从业务理解、数据治理、指标体系、异常识别、根因下钻到策略量化与经营闭环的分析流程。",
+  "main": "analysis/run_mysql_analysis.js",
+  "scripts": {
+    "generate-data": "node analysis/generate_sensor_data.js",
+    "analyze": "node analysis/run_mysql_analysis.js",
+    "test": "node tests/generator.test.js && node tests/report_builder.test.js && node tests/sql_contract.test.js",
+    "lint": "node scripts/lint.js",
+    "ci": "npm run lint && npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polaris-Debug/device-profit-project.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "mysql2": "^3.24.5"
+  }
+}

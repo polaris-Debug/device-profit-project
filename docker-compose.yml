@@ -1,0 +1,21 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: device-profit-mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: device_profit_password
+      MYSQL_DATABASE: device_profit_analysis
+      TZ: Asia/Shanghai
+    ports:
+      - "3306:3306"
+    volumes:
+      - device-profit-mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-pdevice_profit_password"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  device-profit-mysql-data:
