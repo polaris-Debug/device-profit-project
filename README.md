@@ -1,3 +1,5 @@
+
+#声明：本项目为个人学习与能力展示项目。因涉及企业敏感数据，采用高保真模拟生成器构建数据。项目核心旨在展示数据分析在制造业利润提升中的完整业务闭环与 SQL 数据治理能力。
 # Device Profit Analytics
 
 MySQL-first manufacturing analytics for detecting equipment anomalies, reducing unplanned downtime, and quantifying profit impact.
