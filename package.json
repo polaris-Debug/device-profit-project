@@ -22,6 +22,6 @@
   },
   "type": "commonjs",
   "dependencies": {
-    "mysql2": "^3.24.5"
+    "mysql2": "^3.24.6"
   }
 }
